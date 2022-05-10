@@ -8,6 +8,7 @@
 		//Versión: 1.0
 		//Fecha: Abril-2022
 		//Descripción: Primer desafío del proyecto ALURA-LATAM-->
+		//#challengeonecodificador2
 
 		<link rel="stylesheet" type="text/css" media="only screen and (max-width: 1440px)" href="estilos.css">
 
