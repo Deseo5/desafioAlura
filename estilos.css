@@ -1,0 +1,159 @@
+*{
+
+background : #F3F5FC;
+
+}
+
+
+.contenidoAntesdeTexto{
+
+	position: absolute;
+	width: 200px;
+	height: 300px;
+	left: 1090px;
+	top: 200px;
+	background: #FFFFFF;
+	
+}
+
+p.ningunMensaje{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	background: #FFFFFF;
+
+}
+
+p.ingreseelTexto{
+	font-size: 13px;
+	+font-weight: bold;
+	text-align: center;
+	background: #FFFFFF;
+
+}
+
+
+.botonesEncriptar{
+	+display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 24px;
+	background-color: #0A3871;
+	position: absolute;
+	width: 336px;
+	height: 67px;
+	left: 140px;
+	top: 630px;
+	border: 1px solid #0A3871;
+	box-sizing: border-box;
+	border-radius: 24px;
+	cursor: pointer;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+
+}
+
+.botonesDesencriptar{
+	+display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 24px;	
+	position: absolute;
+	width: 336px;
+	height: 67px;
+	left: 550px;
+	top: 630px;
+	border: 1px solid #0A3871;
+	box-sizing: border-box;
+	border-radius: 24px;
+	cursor: pointer;
+	font-size: 20px;
+	text-align: center;
+	
+
+}
+
+.restrincciones{
+	position: relative;
+	width: 250px;
+	height: 20px;
+	left: 150px;
+	top: 115px;
+	font-size: 15px;	
+	color: #0A3871;
+
+}
+
+
+
+
+
+
+.logo{
+	position: absolute;
+	left: 5%;
+	+right: 37.43%;
+	top: 3%;
+}
+
+
+.ingresoTexto{
+	position: absolute;
+	width: 577px;
+	height: 48px;
+	left: 240px;
+	top: 168px;	
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 150%;
+	color: red;
+}
+
+.areaTextoEncriptador{
+	position: relative;
+	width: 800px;
+	height: 400px;
+	left: 100px;
+	top: 170px;
+	background : #F3F5FC;	
+	border: 0px;
+	font-size: 30px;
+	color: #0A3871;
+
+}
+
+   
+.areaTextoEncriptado{
+	position: absolute;
+	width: 350px;
+	height: 680px;
+	left: 1010px;
+	top: 20px;
+	background: #FFFFFF;
+	box-shadow: 10px 24px 30px 10px rgba(0, 0, 0, 0.08);
+	border-radius: 32px;
+	padding: 10px;
+	border: 0px;
+	font-size: 30px;
+}
+
+
+.botonCopiar {
+	+display: flex;
+	flex-direction: row;
+	position: absolute;
+	width: 336px;
+	height: 67px;
+	left: 1030px;
+	top: 630px;
+	border: 1px solid #0A3871;
+	box-sizing: border-box;
+	border-radius: 24px;
+	cursor: pointer;
+	font-size: 20px;
+	text-align: center;
+	
+
+}
