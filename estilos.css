@@ -26,7 +26,6 @@ p.ningunMensaje{
 
 p.ingreseelTexto{
 	font-size: 13px;
-	+font-weight: bold;
 	text-align: center;
 	background: #FFFFFF;
 
@@ -34,7 +33,6 @@ p.ingreseelTexto{
 
 
 .botonesEncriptar{
-	+display: flex;
 	flex-direction: row;
 	align-items: flex-start;
 	padding: 24px;
@@ -55,7 +53,6 @@ p.ingreseelTexto{
 }
 
 .botonesDesencriptar{
-	+display: flex;
 	flex-direction: row;
 	align-items: flex-start;
 	padding: 24px;	
@@ -85,18 +82,12 @@ p.ingreseelTexto{
 
 }
 
-
-
-
-
-
 .logo{
 	position: absolute;
 	left: 5%;
 	+right: 37.43%;
 	top: 3%;
 }
-
 
 .ingresoTexto{
 	position: absolute;
@@ -141,7 +132,6 @@ p.ingreseelTexto{
 
 
 .botonCopiar {
-	+display: flex;
 	flex-direction: row;
 	position: absolute;
 	width: 336px;
