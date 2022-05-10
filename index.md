@@ -1,37 +1,191 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
 
-You can use the [editor on GitHub](https://github.com/Deseo5/desafioAlura/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+		<!-- Página de Encriptado
+		//Autor: Joddy A. Bautista
+		//Versión: 1.0
+		//Fecha: Abril-2022
+		//Descripción: Primer desafío del proyecto ALURA-LATAM-->
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width: 1440px)" href="estilos.css">
 
-### Markdown
+		<script type="text/javascript">
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+		//FUNCIóN ENCRIPTAR
+		function cambiarCaracteres(texto)
 
-- Bulleted
-- List
+		{
+		    texto = texto.split("");
 
-1. Numbered
-2. List
+		    for(let i = 0; i < texto.length; ++i)
+		    {
+		        switch(texto[i])
+		        {
+		            case "a":
+		                texto[i] = "ai";
+		                break;
 
-**Bold** and _Italic_ and `Code` text
+		            case "e":
+		                texto[i] = "enter";
+		                break;
 
-[Link](url) and ![Image](src)
-```
+		            case "i":
+		                texto[i] = "imes";
+		                break;
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+		            case "o":
+		                texto[i] = "ober";
+		                break;
 
-### Jekyll Themes
+		            case "u":
+		                texto[i] = "ufat";
+		                break;            
+		        }
+		    }
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Deseo5/desafioAlura/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+		    return texto.join("");    
+		}
+		
 
-### Support or Contact
+
+		//FUNCIóN DESENCRIPTAR
+		function textoNormal(texto)
+
+				{
+					do {
+						  texto = texto.replace("ai", "a");
+
+						 } while (texto.includes("ai"));
+
+					do {
+						  texto = texto.replace("enter", "e");
+						  
+						 } while (texto.includes("enter"));
+
+					do {
+						  texto = texto.replace("imes", "i");
+
+						 } while (texto.includes("imes"));
+
+					do {
+						  texto = texto.replace("ober", "o");
+						  
+						 } while (texto.includes("ober"));
+
+					do {
+						  texto = texto.replace("ufat", "u");
+						  
+						 } while (texto.includes("ufat"));
+
+					return texto;
+
+				}
+
+
+				//LLAMADA A COPIAR
+			function copiarPegar()
+			{
+				var contenido = document.getElementById('textoEncriptado');
+				contenido.select();
+    		document.execCommand('copy');    			
+			}
+
+
+			//LLAMADA A DESENCRIPTAR
+			function desencriptar()
+			{				
+			  valor = document.getElementById("texto_A_Encriptar").value;
+				document.registroTexto.textoEncriptado.value = textoNormal(valor);
+					
+			}
+
+
+			//LLAMADA A ENCRIPTAR
+			function encriptar()
+			{				
+				valor = document.getElementById("texto_A_Encriptar").value;
+				document.registroTexto.textoEncriptado.value = cambiarCaracteres(valor);
+				esconder();	
+			}
+
+
+			function esconder()
+			{
+  			document.getElementById("contenidoAntesdeTexto").style.visibility = "hidden";
+  			document.getElementById("ingresoTexto").style.visibility = "hidden";
+			}
+
+
+		</script>
+
+	
+
+		<title>
+			Texto Indesifrable
+		</title>
+
+	</head>
+
+
+	<body>
+		<h1>Código Secreto</h1>
+
+	<!-- ETIQUETA SECCION DEL FORMULARIO  -->
+	<section class="seccion_formulario">
+
+	  <!-- NOMBRE DEL FORUMLARIO -->
+		<form class="formulario" name="registroTexto" >
+
+
+
+			<img class="logo" src="imagenes/logo.png">
+
+
+		    <!-- CONTENEDOR DEL FORMULARIO DEL TEXTO A ENCRIPTAR    -->
+				<textarea  id="texto_A_Encriptar" name="texto_A_Encriptar" class="areaTextoEncriptador" placeholder="Ingrese su texto aquí"></textarea>
+
+			  	<br>
+			  	<br>	  	
+
+		  	<!-- BOTON QUE LLAMA LA FUNCION DEL ENCRIPTADOR -->
+		  	
+		  	<input class="botonesDesencriptar" type="button" name="btn2" value="Desencriptar!" onclick="desencriptar();">
+		  	<input class="botonesEncriptar"  type="button" name="btn1" value="Encriptar!" onclick="encriptar()";>
+
+			  	<br>
+			  	<br>
+
+			  	<p class="restrincciones">Solo letras minúsculas y sin acentos</p>	  	
+
+		  	<!-- CONTENEDOR DEL TEXTO ENCRIPTADO -->
+		  	<textarea class="areaTextoEncriptado" id="textoEncriptado" name="textoEncriptado"  rows="5" cols="50"></textarea>
+
+		  		<input class="botonCopiar"  type="button" name="btn3" value="Copiar" onclick="copiarPegar()";>
+
+					<br>
+					<br>
+
+					<!-- <p class="ingresoTexto" id="ingresoTexto">Ingrese su texto aquí</p> -->
+
+
+					<div class="contenidoAntesdeTexto" id="contenidoAntesdeTexto">
+						<img class="muneco" src="imagenes/muneco.png">
+						<p class="ningunMensaje">Ningun mensaje fue encontrado</p>
+						<p class="ingreseelTexto">Ingresa el texto que desees encriptar o desencriptar.</p>	    
+    			</div> 
+
+
+		 </form>
+
+	</section>
+
+
+</body>
+
+</html>
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
